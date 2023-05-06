@@ -56,7 +56,7 @@ http://localhost:8989/bank-api/h2-console/
 
 ```
 
-## Testing the Bank APP Rest Api
+## Testing Account Ledger API
 Added some requests for easy testing in Resource folder.
 
 Please note due to work commitment and time restrain the solution is not optimum.
