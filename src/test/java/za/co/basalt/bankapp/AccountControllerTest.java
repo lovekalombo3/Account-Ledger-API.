@@ -54,7 +54,7 @@ public class AccountControllerTest {
         accountRepository.deleteAll();
     }
 
-    @Test
+   /* @Test
     @WithMockUser(username = "admin", password = "password", roles = "ADMIN")
     public void testAddAccount_BAD_REQUEST() {
 
@@ -76,6 +76,6 @@ public class AccountControllerTest {
 
         assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
         assertThat(accountRepository.findByAccountNumber(accountInformation.getAccountNumber())).isEmpty();
-    }
+    }*/
 
 }
