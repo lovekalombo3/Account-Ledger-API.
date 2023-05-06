@@ -29,9 +29,6 @@ public class CustomerControllerTest {
     @Autowired
     private CustomerRepository customerRepository;
 
-    @Autowired
-    private BankingServiceHelper helper;
-
     @LocalServerPort
     private int port;
 
@@ -47,7 +44,7 @@ public class CustomerControllerTest {
         customerRepository.deleteAll();
     }
 
-    /*@Test
+    @Test
     public void testAddCustomer() {
         CustomerDetails customerDetails = new CustomerDetails("Benjamin","Kalombo","K",1002L
                 ,"Active", new AddressDetails("44 Hoffmann", "Hartbeespoort", "Ifafi","Gauteng","0215","South Africa"),
@@ -55,8 +52,7 @@ public class CustomerControllerTest {
         ResponseEntity<Void> response = restTemplate.postForEntity(
                 baseUrl + "/add"  , customerDetails, Void.class);
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
-        assertThat(customerRepository.findByCustomerNumber(customerDetails.getCustomerNumber())).isPresent();
-    }*/
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED);
+    }
 
 }

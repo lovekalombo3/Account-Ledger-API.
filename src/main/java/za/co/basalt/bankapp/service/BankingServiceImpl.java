@@ -5,7 +5,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -31,20 +30,19 @@ import za.co.basalt.bankapp.service.helper.BankingServiceHelper;
 @Transactional
 public class BankingServiceImpl implements BankingService {
 
-	@Autowired
-    private CustomerRepository customerRepository;
-	@Autowired
-    private AccountRepository accountRepository;
-	@Autowired
-    private TransactionRepository transactionRepository;
-	@Autowired
-    private CustomerAccountXRefRepository custAccXRefRepository;
-    @Autowired
-    private BankingServiceHelper bankingServiceHelper;
+    private final CustomerRepository customerRepository;
+    private  final AccountRepository accountRepository;
+    private final TransactionRepository transactionRepository;
+    private final CustomerAccountXRefRepository custAccXRefRepository;
+    private final BankingServiceHelper bankingServiceHelper;
 
-    public BankingServiceImpl(CustomerRepository repository) {
+    public BankingServiceImpl(CustomerRepository repository, AccountRepository accountRepository, TransactionRepository transactionRepository, CustomerAccountXRefRepository custAccXRefRepository, BankingServiceHelper bankingServiceHelper) {
         this.customerRepository=repository;
-    }
+		this.accountRepository = accountRepository;
+		this.transactionRepository = transactionRepository;
+		this.custAccXRefRepository = custAccXRefRepository;
+		this.bankingServiceHelper = bankingServiceHelper;
+	}
     
    
     public List<CustomerDetails> findAll() {

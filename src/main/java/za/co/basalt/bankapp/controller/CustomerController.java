@@ -2,10 +2,7 @@ package za.co.basalt.bankapp.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,22 +13,23 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import za.co.basalt.bankapp.domain.CustomerDetails;
-import za.co.basalt.bankapp.service.BankingServiceImpl;
+import za.co.basalt.bankapp.service.BankingService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 
-import javax.annotation.security.RolesAllowed;
-
 @RestController
 @RequestMapping("customers")
 @Api(tags = { "Customer REST endpoints" })
 public class CustomerController {
 
-	@Autowired
-	private BankingServiceImpl bankingService;
+	private final BankingService bankingService;
+
+	public CustomerController(BankingService bankingService) {
+		this.bankingService = bankingService;
+	}
 
 	@GetMapping(path = "/all")
 	@ApiOperation(value = "Find all customers", notes = "Gets details of all the customers")

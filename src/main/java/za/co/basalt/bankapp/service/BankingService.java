@@ -3,11 +3,13 @@ package za.co.basalt.bankapp.service;
 import java.util.List;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import za.co.basalt.bankapp.domain.AccountInformation;
 import za.co.basalt.bankapp.domain.CustomerDetails;
 import za.co.basalt.bankapp.domain.TransactionDetails;
 import za.co.basalt.bankapp.domain.TransferDetails;
 
+@Service
 public interface BankingService {
 
     public List<CustomerDetails> findAll();

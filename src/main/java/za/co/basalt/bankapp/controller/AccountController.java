@@ -2,16 +2,13 @@ package za.co.basalt.bankapp.controller;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.access.annotation.Secured;
-import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.web.bind.annotation.*;
 
 import za.co.basalt.bankapp.domain.AccountInformation;
 import za.co.basalt.bankapp.domain.TransactionDetails;
 import za.co.basalt.bankapp.domain.TransferDetails;
-import za.co.basalt.bankapp.service.BankingServiceImpl;
+import za.co.basalt.bankapp.service.BankingService;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -23,8 +20,11 @@ import io.swagger.annotations.ApiResponses;
 @Api(tags = { "Accounts and Transactions REST endpoints" })
 public class AccountController {
 
-	@Autowired
-	private BankingServiceImpl bankingService;
+	private final BankingService bankingService;
+
+	public AccountController(BankingService bankingService) {
+		this.bankingService = bankingService;
+	}
 
 	@GetMapping(path = "/{accountNumber}")
 	@ApiOperation(value = "Get account details", notes = "Find account details by account number")

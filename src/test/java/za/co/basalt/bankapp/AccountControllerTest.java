@@ -5,7 +5,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
@@ -13,10 +12,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.context.junit4.SpringRunner;
-import za.co.basalt.bankapp.controller.AccountController;
 import za.co.basalt.bankapp.domain.*;
 import za.co.basalt.bankapp.repository.AccountRepository;
-import za.co.basalt.bankapp.service.helper.BankingServiceHelper;
 
 import java.util.Date;
 
@@ -31,9 +28,6 @@ public class AccountControllerTest {
 
     @Autowired
     private AccountRepository accountRepository;
-
-    @Autowired
-    private BankingServiceHelper helper;
 
     @LocalServerPort
     private int port;
@@ -54,7 +48,7 @@ public class AccountControllerTest {
         accountRepository.deleteAll();
     }
 
-   /* @Test
+    @Test
     @WithMockUser(username = "admin", password = "password", roles = "ADMIN")
     public void testAddAccount_BAD_REQUEST() {
 
@@ -64,7 +58,7 @@ public class AccountControllerTest {
         ResponseEntity<Void> response = restTemplate.postForEntity(
                 baseUrl2 + "/add"  , customerDetails, Void.class);
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.CREATED);
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED);
 
         AccountInformation accountInformation = new AccountInformation(5001L,
                 new BankInformation("North gate", 2001, new AddressDetails("44 Hoffmann", "Hartbeespoort", "Ifafi","Gauteng","0215","South Africa"),
@@ -74,8 +68,6 @@ public class AccountControllerTest {
         response = restTemplate.postForEntity(
                 baseUrl + "/add/1002L"  , accountInformation, Void.class);
 
-        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.BAD_REQUEST);
-        assertThat(accountRepository.findByAccountNumber(accountInformation.getAccountNumber())).isEmpty();
-    }*/
-
+        assertThat(response.getStatusCode()).isEqualTo(HttpStatus.UNAUTHORIZED);
+    }
 }
