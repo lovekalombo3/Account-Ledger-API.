@@ -61,6 +61,8 @@ Added some requests for easy testing in Resource folder.
 
 Please note due to work commitment and time restrain the solution is not optimum.
 
-
+## Login
+Username : admin
+Password : password
 
 
