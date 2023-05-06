@@ -1,0 +1,20 @@
+{
+  "contactDetails": {
+    "emailId": "aaron@test.com",
+    "homePhone": "09078234",
+    "workPhone": "0137778888"
+  },
+  "customerAddress": {
+        "address1": "xxxxx xxx",
+        "address2": "Block G",
+        "city": "Waterkloof",
+        "country": "South africa",
+        "province": "K",
+        "zip": "0215"
+  },
+  "customerNumber": 1002,
+  "firstName": "Aaron",
+  "lastName": "Rodgers",
+  "middleName": "B",
+  "status": "Active"
+}

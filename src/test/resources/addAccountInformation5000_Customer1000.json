@@ -1,0 +1,20 @@
+ {
+    "accountBalance": 8740,
+    "accountCreated": "2019-05-05T22:01:05.964Z",
+    "accountNumber": 5000,    
+    "accountStatus": "Active",    
+    "accountType": "Current",
+    "bankInformation": {
+      "branchAddress": {
+	        "address1": "50 West avenue",
+	        "address2": "Ocean view",
+	        "city": "Camp bay",
+	        "country": "South Africa",
+	        "province": "CT",
+	        "zip": "37076"
+      },
+      "branchCode": 65564,
+      "branchName": "Camp bay",
+      "routingNumber": 234789876
+    }
+}

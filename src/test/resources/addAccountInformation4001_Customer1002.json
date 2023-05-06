@@ -1,0 +1,20 @@
+ {
+    "accountBalance": 5000,
+    "accountCreated": "2019-05-05T22:01:05.964Z",
+    "accountNumber": 4001,    
+    "accountStatus": "Active",    
+    "accountType": "Checking",
+    "bankInformation": {
+      "branchAddress": {
+	        "address1": "43 Nuanedsi Crescent",
+	        "address2": "Winchester Hills",
+	        "city": "Johannesburg South",
+	        "country": "South Africa",
+	        "province": "G",
+	        "zip": "2091"
+      },
+      "branchCode": 23453,
+      "branchName": "South gate",
+      "routingNumber": 456789876
+    }
+}

@@ -1,0 +1,20 @@
+ {
+    "accountBalance": 2500,
+    "accountCreated": "2019-05-05T22:01:05.964Z",
+    "accountNumber": 4000,    
+    "accountStatus": "Active",    
+    "accountType": "Saving",
+    "bankInformation": {
+      "branchAddress": {
+	        "address1": "44 Boem Cresc",
+	        "address2": "Unit 44",
+	        "city": "Midrand",
+	        "country": "South Africa",
+	        "province": "G",
+	        "zip": "2000"
+      },
+      "branchCode": 23453,
+      "branchName": "Johannesburg",
+      "routingNumber": 456789876
+    }
+}

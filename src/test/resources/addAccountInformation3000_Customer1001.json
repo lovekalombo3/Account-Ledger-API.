@@ -1,0 +1,20 @@
+ {
+    "accountBalance": 4352,
+    "accountCreated": "2019-05-05T22:01:05.964Z",
+    "accountNumber": 3000,    
+    "accountStatus": "Active",    
+    "accountType": "Current",
+    "bankInformation": {
+      "branchAddress": {
+	        "address1": "476 Felstead Road",
+	        "address2": "UNIT 85",
+	        "city": "Randburg",
+	        "country": "South Africa",
+	        "province": "G",
+	        "zip": "0216"
+      },
+      "branchCode": 1234,
+      "branchName": "North gate",
+      "routingNumber": 676789345
+    }
+}

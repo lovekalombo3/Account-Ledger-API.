@@ -1,0 +1,20 @@
+ {
+    "accountBalance": 6150,
+    "accountCreated": "2019-05-05T22:01:05.964Z",
+    "accountNumber": 3001,    
+    "accountStatus": "Active",    
+    "accountType": "Saving",
+    "bankInformation": {
+      "branchAddress": {
+	        "address1": "470 Felstead Road",
+	        "address2": "UNIT 40",
+	        "city": "Hartbeespoort",
+	        "country": "South Africa",
+	        "province": "G",
+	        "zip": "2091"
+      },
+      "branchCode": 1234,
+      "branchName": "West gate",
+      "routingNumber": 676789345
+    }
+}

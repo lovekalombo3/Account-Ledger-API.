@@ -1,0 +1,20 @@
+ {
+    "accountBalance": 4355.50,
+    "accountCreated": "2019-05-05T22:01:05.964Z",
+    "accountNumber": 5001,    
+    "accountStatus": "Active",    
+    "accountType": "Saving",
+    "bankInformation": {
+      "branchAddress": {
+	        "address1": "445 South street",
+	        "address2": "Durban north",
+	        "city": "Durban",
+	        "country": "South africa",
+	        "province": "K",
+	        "zip": "00013"
+      },
+      "branchCode": 65564,
+      "branchName": "North beach",
+      "routingNumber": 234789876
+    }
+}

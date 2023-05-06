@@ -1,0 +1,20 @@
+{
+  "contactDetails": {
+    "emailId": "john@test.com",
+    "homePhone": "0114334933",
+    "workPhone": "0114334989"
+  },
+  "customerAddress": {
+        "address1": "70 Elaine street",
+        "address2": "Ridgeway",
+        "city": "Johannesburg south",
+        "country": "South africa",
+        "province": "G",
+        "zip": "2091"
+  },
+  "customerNumber": 1000,
+  "firstName": "John",
+  "lastName": "Doe",
+  "middleName": "H",
+  "status": "Active"
+}

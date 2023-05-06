@@ -1,0 +1,20 @@
+{
+  "contactDetails": {
+    "emailId": "roger@test.com",
+    "homePhone": "0123339089",
+    "workPhone": "0125670000"
+  },
+  "customerAddress": {
+        "address1": "256 Oak Avenue",
+        "address2": "Parklane",
+        "city": "Randburg",
+        "country": "South Africa",
+        "province": "G",
+        "zip": "2001"
+  },
+  "customerNumber": 1001,
+  "firstName": "Roger",
+  "lastName": "Federer",
+  "middleName": "D",
+  "status": "Active"
+}
